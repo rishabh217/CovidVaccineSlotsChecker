@@ -123,7 +123,23 @@ async function enterDetailsInMap(search) {
     await waitAndClick('input[aria-label="Search Google Maps"]');
     await page.type('input[aria-label="Search Google Maps"]', search.name + " " + search.address, { delay: 30 });
     await waitAndClick('#searchbox-searchbutton');
-    // todo -> handle if no direction icon given
+    
+    await page.waitForSelector('#pane .widget-pane-content-holder', { visible: true });
+
+    // In some cases, direction icon is not directly visible but paces list appears, it will check if that list is there or not
+    let presence = await page.evaluate(() => {
+        let el = document.querySelector('#pane .section-place-result-container-summary');
+        if (el == null)
+            return false;
+        else
+            return true;
+    });
+    
+    // If the places list is there, it will click on the top result
+    if (presence) {
+        await waitAndClick('#pane .section-place-result-container-summary');
+    }
+
     await waitAndClick('img[alt="Directions"]');
     await waitAndClick('#directions-searchbox-0 input[class="tactile-searchbox-input"]');
     await page.type('#directions-searchbox-0 input[class="tactile-searchbox-input"]', myAddress, { delay: 50 });
