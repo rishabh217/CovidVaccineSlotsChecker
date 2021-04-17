@@ -1,0 +1,16 @@
+{
+  "name": "PepHackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "secrets.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.5.0",
+    "puppeteer": "^8.0.0"
+  }
+}
