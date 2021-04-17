@@ -27,20 +27,26 @@ async function run() {
 
     headlessPage = await headlessBrowser.newPage();
 
-    // Start of fetching the center details
-    page = await browser.newPage();
-    await performFetchingTask();
-    // End of fetching the center details
+    try {
 
-    // Start of performing all the tasks related to map and details of all centers
-    page = await browser.newPage();
-    await performMapTasks();
-    // End of performing all the tasks related to map and details of all centers
+        // Start of fetching the center details
+        page = await browser.newPage();
+        await performFetchingTask();
+        // End of fetching the center details
 
-    // Start of sending email task
-    let emailMsg = await sendEmail();
-    console.log("Email status", emailMsg);
-    // End of sending email task
+        // Start of performing all the tasks related to map and details of all centers
+        page = await browser.newPage();
+        await performMapTasks();
+        // End of performing all the tasks related to map and details of all centers
+
+        // Start of sending email task
+        let emailMsg = await sendEmail();
+        console.log("Email status", emailMsg);
+        // End of sending email task
+
+    } catch (err) {
+        console.log(err);
+    }
 
     // Closing both browser when work is complete
     browser.close();
@@ -69,7 +75,7 @@ async function performFetchingTask() {
     // This will help in getting all the nearby centers in an array form
     searchArr = await page.evaluate(getNearbyCenters);
 
-    console.log("Centers Fetched");
+    console.log(searchArr.length, "Centers Fetched");
 
     return page.close();
 }
@@ -123,7 +129,7 @@ async function enterDetailsInMap(search) {
     await waitAndClick('input[aria-label="Search Google Maps"]');
     await page.type('input[aria-label="Search Google Maps"]', search.name + " " + search.address, { delay: 30 });
     await waitAndClick('#searchbox-searchbutton');
-    
+
     await page.waitForSelector('#pane .widget-pane-content-holder', { visible: true });
 
     // In some cases, direction icon is not directly visible but paces list appears, it will check if that list is there or not
@@ -134,7 +140,7 @@ async function enterDetailsInMap(search) {
         else
             return true;
     });
-    
+
     // If the places list is there, it will click on the top result
     if (presence) {
         await waitAndClick('#pane .section-place-result-container-summary');
