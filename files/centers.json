@@ -1,0 +1,72 @@
+[
+    {
+        "center": {
+            "name": "Malik Radix Health Care",
+            "address": "C-217, Nirman Vihar, Near To Niraman Vihar Metro Station, Vikas Marg, Block C, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/bWuHkiNb2EMARAENA"
+    },
+    {
+        "center": {
+            "name": "Khanna Eye Centre",
+            "address": "E-368, Nirman Vihar, Pillar No 66, Vikas Marg, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/zs79oRsGz8tSgWgW9"
+    },
+    {
+        "center": {
+            "name": "Sharp Sight Centre",
+            "address": "A-15, Swasthya Vihar, Metro Pillar Number 82, Defence Enclave, Opposite Preet Vihar, Vikas Marg, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/aSovieFAtPmtc3eT9"
+    },
+    {
+        "center": {
+            "name": "Metro Hospital & Cancer Institute, Preet Vihar",
+            "address": "21, Community Centre, Preet Vihar, Acharya Nagraj Marg, C Block, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/EhoRcoLPghHLoMz68"
+    },
+    {
+        "center": {
+            "name": "Patel Hospital",
+            "address": "U 158, Shakarpur, Laxmi Nagar, Vikas Marg, Opposite Subway, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/STMYeV97qtLGZU4G6"
+    },
+    {
+        "center": {
+            "name": "Makkar Multi Speciality Hospital",
+            "address": "A 1, 2, Priyadarshini Vihar, Near Metroplex East Mall, Mohan Park, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/fZVx5Qv3nRSC7Pzx5"
+    },
+    {
+        "center": {
+            "name": "RS Grover Memorial Hospital",
+            "address": "B-243, Priyadarshini Vihar, Near Lovely Public School, Laxmi Nagar, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/n77E3NNbkrgq1YRp8"
+    },
+    {
+        "center": {
+            "name": "Satya Medical Centre",
+            "address": "B6, Mandawali, Fazalpur, Near Ip Extension, Joshi Colony, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/uteGqPCTkULUSSLt6"
+    },
+    {
+        "center": {
+            "name": "Apex Citi Hospital",
+            "address": "D-440, D Block, IP Extension, West Vinod Nagar, Hanuman Road, Near Nazzir Hotel, Block D, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/ZDq3i3F288wkY47R6"
+    },
+    {
+        "center": {
+            "name": "Mahesh Hospital",
+            "address": "D-437, Block D, Patparganj Society Complex, West Vinod Nagar, I P Extension, Patparganj, Behind Ras Vihar Society, & Opposite Petrol Bank, New Delhi, Delhi, 110092"
+        },
+        "route": "https://goo.gl/maps/CkTHcPXJMauCUcnFA"
+    }
+]
